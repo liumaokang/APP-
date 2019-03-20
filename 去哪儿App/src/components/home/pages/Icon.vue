@@ -7,7 +7,7 @@
           <div class="iconImg">
             <img :src="icon.imgUrl" alt="icon.title">
           </div>
-          <p>{{icon.title}}</p>
+          <p class="runout">{{icon.title}}</p>
         </div>
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>

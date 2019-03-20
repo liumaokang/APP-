@@ -9,9 +9,8 @@
 
 </script>
 
-
 <style lang="stylus" scoped>
-  @import '../../../assets/css/var.styl'
+  @import '~css/var.styl'
   .home_header{
     line-height :0.44rem;
     display flex;

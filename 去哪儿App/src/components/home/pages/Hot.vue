@@ -10,7 +10,7 @@
     <ul class="slideImg">
       <li v-for="item in hotlist">
           <div><img :src="item.imgUrl" alt=""></div>
-         <p>{{item.touristSpot}}</p>
+         <p class="runout">{{item.touristSpot}}</p>
          <p><span>¥{{item.price}}</span>起</p>
         <div class="numberTitl" ><img :src="item.number" alt="" v-if="item.number"></div>
       </li>

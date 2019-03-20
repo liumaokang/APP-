@@ -6,13 +6,13 @@
         <div  class="border-top">
           <div class="like-left">
             <img :src="item.imgUrl" alt="">
-            <div style="font-size: 12px">可订明日</div>
+            <div class="shopuse" style="font-size: 12px">可订明日</div>
           </div>
           <div class="like-right">
-            <h3>{{item.touristSpot}}</h3>
+            <h3 class="runout">{{item.touristSpot}}</h3>
             <p>★★★★★<span>{{item.comment}}</span></p>
             <p>{{item.price}}<span>起</span></p>
-            <p>{{item.word}}</p>
+            <p class="runout">{{item.word}}</p>
           </div>
           <div class="geographical"><span>{{item.geographical}}</span></div>
         </div>
@@ -182,7 +182,7 @@
     width: 100%;
     height: 100%;
   }
-  .like-left>div{
+  .like-left .shopuse{
     width: 0.51rem;
     line-height: 0.16rem;
     position: absolute;

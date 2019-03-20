@@ -6,7 +6,7 @@
         <div><img :src="item.imgUrl" alt=""></div>
         <div class="gowhere_text">
           <p>{{item.text}}</p>
-          <p>{{item.text}}</p>
+          <p class="runout">{{item.text1}}</p>
         </div>
       </li>
     </ul>

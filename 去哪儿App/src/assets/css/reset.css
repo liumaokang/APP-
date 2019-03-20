@@ -53,5 +53,9 @@ html{
 }
 .border-right{
   border-right: 1px solid #eee;
-
+}
+.runout{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
