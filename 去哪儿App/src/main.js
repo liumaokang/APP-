@@ -16,9 +16,11 @@ import './assets/css/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
-
-
-
+//引入axios请求
+import axios from 'axios';
+Vue.prototype.$http = axios;
+//引入better-scroll滚动效果
+import BScroll from 'better-scroll'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

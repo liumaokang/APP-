@@ -2,7 +2,7 @@
   <div class="swiper">
     <swiper :options="swiperOption" >
       <!-- slides -->
-      <swiper-slide v-for="item in swiperlist " :key="item.id">
+      <swiper-slide v-for="item in swiperlist" :key="item.id">
         <img :src="item.imgUrl" alt="">
       </swiper-slide>
       <!-- Optional controls -->
@@ -14,44 +14,23 @@
 
 <script>
   export default {
+
     data() {
       return {
         swiperOption: {
           pagination: {
             el: '.swiper-pagination'
           },
-          loop:true,
+          loop:false,
           autoplay:{
-            delay: 1000,
+            delay: 2000,
             stopOnLastSlide: false,
             disableOnInteraction: true,
-          }
+          },
         },
-
-        "swiperlist":[
-          {
-            "id":"01",
-            "imgUrl":require("@/assets/images/banner1.jpg")
-          },
-          {
-            "id":"02",
-            "imgUrl":require("@/assets/images/banner2.jpg")
-          },
-          {
-            "id":"03",
-            "imgUrl":require("@/assets/images/banner3.jpg")
-          },
-          {
-            "id":"04",
-            "imgUrl":require("@/assets/images/banner4.jpg")
-          },
-          {
-            "id":"05",
-            "imgUrl":require("@/assets/images/banner5.jpg")
-          },
-        ]
       }
-    }
+    },
+    props:["swiperlist"],
   }
 </script>
 

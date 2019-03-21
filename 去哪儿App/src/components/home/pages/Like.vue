@@ -6,7 +6,7 @@
         <div  class="border-top">
           <div class="like-left">
             <img :src="item.imgUrl" alt="">
-            <div class="shopuse" style="font-size: 12px">可订明日</div>
+            <div class="shopuse" v-if="item.shopuse" style="font-size: 12px">{{item.shopuse}}</div>
           </div>
           <div class="like-right">
             <h3 class="runout">{{item.touristSpot}}</h3>
@@ -24,92 +24,16 @@
 <script>
   export  default {
     data(){
-      return {
-        "likelist":[
-          {
-            id:"01",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1508/c5/a017645d82ab89f271fdfb1bd6ecc2e0.water.jpg_200x200_2de772de.jpg",
-            touristSpot:"青林野生动物园",
-            comment:"10384条评论",
-            price:48,
-            geographical:"长安区",
-            word:"走进大自然"
-          },
-          {
-            id:"02",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg",
-            touristSpot:"华清宫",
-            comment:"10384条评论",
-            price:108,
-            geographical:"临潼区",
-            word:"亲近小动物"
-          },
-          {
-            id:"03",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1511/57/57a1490e1b72901a90.img.jpg_200x200_84df18bd.jpg",
-            touristSpot:"华清爱琴海温泉",
-            comment:"10384条评论",
-            price:138,
-            geographical:"临潼区",
-            word:"泡泡温泉多爽的"
-          },
-          {
-            id:"04",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1508/c5/a017645d82ab89f271fdfb1bd6ecc2e0.water.jpg_200x200_2de772de.jpg",
-            touristSpot:"青林野生动物园",
-            comment:"10384条评论",
-            price:48,
-            geographical:"长安区",
-            word:"走进大自然"
-          },
-          {
-            id:"05",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg",
-            touristSpot:"华清宫",
-            comment:"10384条评论",
-            price:108,
-            geographical:"临潼区",
-            word:"亲近小动物"
-          },
-          {
-            id:"06",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1511/57/57a1490e1b72901a90.img.jpg_200x200_84df18bd.jpg",
-            touristSpot:"华清爱琴海温泉",
-            comment:"10384条评论",
-            price:138,
-            geographical:"临潼区",
-            word:"泡泡温泉多爽的"
-          },
-          {
-            id:"07",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1508/c5/a017645d82ab89f271fdfb1bd6ecc2e0.water.jpg_200x200_2de772de.jpg",
-            touristSpot:"青林野生动物园",
-            comment:"10384条评论",
-            price:48,
-            geographical:"长安区",
-            word:"走进大自然"
-          },
-          {
-            id:"08",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg",
-            touristSpot:"华清宫",
-            comment:"10384条评论",
-            price:108,
-            geographical:"临潼区",
-            word:"亲近小动物"
-          },
-          {
-            id:"09",
-            imgUrl:"http://img1.qunarzz.com/sight/p0/1511/57/57a1490e1b72901a90.img.jpg_200x200_84df18bd.jpg",
-            touristSpot:"华清爱琴海温泉",
-            comment:"10384条评论",
-            price:138,
-            geographical:"临潼区",
-            word:""
-          }
-        ]
+      return{
+        up:true
       }
-    }
+    },
+    props:["likelist"],
+    // methods:{
+    //   fun(shopuse){
+    //       console.log(shopuse)
+    //    }
+    // }
   }
 </script>
 <style>

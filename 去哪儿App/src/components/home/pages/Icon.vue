@@ -24,60 +24,9 @@
           },
           loop:true,
         },
-        "iconlist":[
-          {
-            id:"01",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-            "title":"景点门票"
-          },
-          {
-            id:"02",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-            "title":"一日游"
-          },
-          {
-            id:"03",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
-            "title":"世春赏花"
-          },
-          {
-            id:"04",
-            "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/de711920c71e38287d9f95f7910aa1aa.png",
-            "title":"精品小团"
-          },
-          {
-            id:"05",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
-            "title":"泡温泉"
-          },
-          {
-            id:"06",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-            "title":"景点门票"
-          },
-          {
-            id:"07",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-            "title":"一日游"
-          },
-          {
-            id:"08",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
-            "title":"世春赏花"
-          },
-          {
-            id:"09",
-            "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/de711920c71e38287d9f95f7910aa1aa.png",
-            "title":"精品小团"
-          },
-          {
-            id:"010",
-            "imgUrl":"http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
-            "title":"泡温泉"
-          },
-        ]
       }
     },
+    props:["iconlist"],
     computed:{
       page(){
         var pages=[];

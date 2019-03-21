@@ -2,7 +2,9 @@
   <div class="home_header">
       <div class="back iconfont">&#xe642;</div>
       <div class="server iconfont">&#xe600;输入城市/景点/游玩主题</div>
-      <div class="city iconfont" >西安&#xe65b;</div>
+    <router-link to="/City">
+      <div class="citys iconfont" >西安&#xe65b;</div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -16,6 +18,9 @@
     display flex;
     background-color :$bgcolor;
     color: #fff;
+    position fixed;
+    z-index 20;
+    width 100%;
   }
   .back{
     padding :0 0.1rem;
@@ -32,10 +37,11 @@
     padding-left 0.1rem;
     flex:1;
   }
-  .city{
+  .citys{
     padding :0 0.11rem;
     font-size 0.14rem;
     color :#fff;
+    cursor:pointer;
   }
 </style>
 
