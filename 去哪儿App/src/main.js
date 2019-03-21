@@ -22,9 +22,11 @@ Vue.prototype.$http = axios;
 //引入better-scroll滚动效果
 import BScroll from 'better-scroll'
 /* eslint-disable no-new */
+import store from './store'
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 });

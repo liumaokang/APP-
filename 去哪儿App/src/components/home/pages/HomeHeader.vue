@@ -3,12 +3,17 @@
       <div class="back iconfont">&#xe642;</div>
       <div class="server iconfont">&#xe600;输入城市/景点/游玩主题</div>
     <router-link to="/City">
-      <div class="citys iconfont" >西安&#xe65b;</div>
+      <div class="citys iconfont" >{{city}}&#xe65b;</div>
     </router-link>
   </div>
 </template>
 <script>
-
+  import { mapState } from 'vuex'
+  export default {
+    computed:{
+      ...mapState(['city'])
+    }
+  }
 </script>
 
 <style lang="stylus" scoped>

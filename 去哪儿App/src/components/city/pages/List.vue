@@ -66,7 +66,7 @@
         this.scroll.scrollToElement(0,0,500)
       },
       mainPage(name){
-        console.log(name)
+        this.$router.push("/")
       }
     },
   }
