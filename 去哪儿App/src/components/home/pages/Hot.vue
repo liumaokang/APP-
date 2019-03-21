@@ -1,5 +1,5 @@
 <template>
-  <div class="hot">
+  <div class="hots">
     <div class="hot-left iconfont">
       <div><img src="http://img1.qunarzz.com/piao/fusion/1711/16/bfbb9874e8f11402.png" alt=""></div>
       <span>本周热门榜单</span>
@@ -29,40 +29,27 @@
 
 
 <style scoped>
-  .hot{
+  .hots{
     width: 100%;
     background-color: #fff;
     margin-top: 0.15rem;
   }
-  .hot .hot-left{
+  .hots .hot-left{
     float: left;
     font-size: 0.16rem;
     color: #212121;
     padding:0.12rem 0.13rem;
     line-height: 0.22rem;
   }
-  .hot .hot-left>div{
+  .hots .hot-left>div{
     width: 0.15rem;
     display: inline-block;
   }
-  .hot .hot-left img{
+  .hots .hot-left img{
     width: 100%;
     height: 100%;
   }
-  .hot .hot-right{
-    float: right;
-    font-size: 0.12rem;
-    color: #616161;
-    padding:0.12rem 0.13rem;
-    line-height: 0.22rem;
-  }
-  .hot .slideImg li{
-    position: relative;
-    display: inline-block;
-    margin-right: 0.1rem;
-    width: 1rem;
-  }
-  .hot .slideImg{
+  .hots .slideImg{
     width: 100%;
     white-space: nowrap;
     overflow-x:scroll;
@@ -70,32 +57,46 @@
     padding:0 0.12rem;
     box-sizing: border-box;
   }
-  .hot .slideImg li div:nth-child(1){
+  .hots .hot-right{
+  float: right;
+  font-size: 0.12rem;
+  color: #616161;
+  padding:0.12rem 0.13rem;
+  line-height: 0.22rem;
+  }
+  .hots .slideImg li{
+  position: relative;
+  display: inline-block;
+  margin-right: 0.1rem;
+  width: 1rem;
+  height: 1rem;
+  }
+  .hots .slideImg li div:nth-child(1){
     width: 1rem;
     height: 1rem;
   }
-  .hot .slideImg li img, .numberTitl img{
+  .hots .slideImg li img, .numberTitl img{
     width:100%;
     height: 100%;
   }
-  .hot .slideImg li p{
+  .hots .slideImg li p{
     text-align: center;
     font-size: 0.12rem;
   }
-  .hot .slideImg li p:nth-child(2){
+  .hots .slideImg li p:nth-child(2){
     color: #212121;
     margin-top: 0.06rem;
     line-height: 0.16rem;
     text-overflow: ellipsis;
   }
-  .hot .slideImg li p:nth-child(3){
+  .hots .slideImg li p:nth-child(3){
     color: #616161;
   }
-  .hot .slideImg li p:nth-child(3) span{
+  .hots .slideImg li p:nth-child(3) span{
     color: #ff8300;
     line-height: 0.18rem;
   }
-  .hot .numberTitl img{
+  .hots .numberTitl img{
     position: absolute;
     top: 0;
     left:0;

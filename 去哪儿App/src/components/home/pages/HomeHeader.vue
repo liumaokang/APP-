@@ -20,6 +20,7 @@
     color: #fff;
     position fixed;
     z-index 20;
+    top :0;
     width 100%;
   }
   .back{

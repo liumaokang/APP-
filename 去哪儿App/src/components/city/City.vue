@@ -1,30 +1,21 @@
 <template>
   <div class="city">
-    <city-header></city-header>
-    <city-hot :hotCities="hotCities"></city-hot>
-    <city-sort :cities="cities"></city-sort>
-    <city-list :cities="cities"></city-list>
+        <city-list :cities="cities" :hotCities="hotCities"></city-list>
   </div>
 </template>
 
 
 
 <script>
-  import  CityHeader from "./pages/Header"
-  import  CityHot from "./pages/Hot"
-  import  CitySort from "./pages/Sort"
   import  CityList from "./pages/List"
   export  default {
     data(){
       return{
         hotCities:[],
-        cities:[]
+        cities:{}
       }
     },
     components: {
-      CityHeader,
-      CityHot,
-      CitySort,
       CityList
     },
     mounted(){
@@ -33,6 +24,7 @@
         this.hotCities=this.data.hotCities;
         this.cities=this.data.cities;
       });
+
     }
   }
 </script>
@@ -43,4 +35,12 @@
   .city{
     background-color: #f5f5f5;
   }
+  .container{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    top:0;
+  }
+
 </style>

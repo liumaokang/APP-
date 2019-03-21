@@ -41,6 +41,7 @@
     padding-bottom: 26.7%;   /*防止掉块100/375*/
     background-color: #ddd;
     width: 100%;
+    margin-top: 0.44rem;
   }
   .swiper img{
     width: 100%;
