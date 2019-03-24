@@ -1,6 +1,7 @@
 <template>
   <div class="city">
-        <city-list :cities="cities" :hotCities="hotCities"></city-list>
+    <city-list :cities="cities" :hotCities="hotCities"></city-list>
+    <div class="up" @click="UpGo">☝</div>
   </div>
 </template>
 
@@ -18,14 +19,24 @@
     components: {
       CityList
     },
-    mounted(){
-      this.$http.get("http://localhost:8080/static/mock/data/city.json").then((res)=>{
-        this.data=res.data.data;
-        this.hotCities=this.data.hotCities;
-        this.cities=this.data.cities;
-      });
-
-    }
+    methods:{
+      UpGo() {
+        document.documentElement.scrollTop -= 100;
+        let c = '';
+        if (document.documentElement.scrollTop > 0) {
+          c = setTimeout(() => this.toTop(),12);
+        }else{
+          clearTimeout(c);
+        }
+      },
+    },
+    // mounted(){
+    //   this.$http.get("http://localhost:8080/static/mock/data/city.json").then((res)=>{
+    //     this.data=res.data.data;
+    //     this.hotCities=this.data.hotCities;
+    //     this.cities=this.data.cities;
+    //   });
+    // }
   }
 </script>
 
@@ -42,5 +53,10 @@
     bottom: 0;
     top:0;
   }
-
+  .up {
+    font-size: 0.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
 </style>

@@ -6,7 +6,8 @@
     <Location></Location>
     <Hot :hotlist="hotlist"></Hot>
     <Like :likelist="likelist"></Like>
-    <GoWhere></GoWhere>
+    <GoWhere :vacationList="vacationList"></GoWhere>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -19,15 +20,22 @@
   import Hot from './pages/Hot'
   import Like from './pages/Like'
   import GoWhere from './pages/GoWhere'
-
+  import Footer from './pages/Footer'
+  import { mapState } from 'vuex'
   export default {
     data() {
       return {
         swiperlist: [],
         iconlist: [],
         hotlist: [],
-        likelist: []
+        likelist: [],
+        changeCity:"",
+        vacationList:[],
+
       }
+    },
+    computed:{
+      ...mapState(['city'])
     },
     components: {
       HomeHeader,
@@ -37,18 +45,36 @@
       Hot,
       Like,
       GoWhere,
+      Footer
     },
-    mounted() {
-      this.$http.get("/api/data/home_data.json").then((res) => {
-        this.data = res.data.data[0];
-        this.swiperlist = this.data.swiperlist;
-        this.iconlist = this.data.iconlist;
-        this.hotlist = this.data.hotlist;
-        this.likelist = this.data.likelist;
-        console.log(this.data)
-      });
-
-    }
+    // methods:{
+    //   getHttp(){
+    //     this.$http.get("http://1.lovehou.applinzi.com/gethomedata.php").then((res) => {
+    //       let data = res.data.data;
+    //       console.log(data)
+    //       data.forEach((item,index)=>{
+    //         if(item.city==this.city){
+    //           this.swiperlist = item.swiperList;
+    //           this.iconlist = item.iconsList;
+    //           this.hotlist = item.hotImgs;
+    //           this.likelist = item.likeList;
+    //           this.vacationList = item.vacationList;
+    //           console.log(this.vacationList)
+    //         }
+    //       })
+    //    })
+    //   }
+    // },
+    // mounted() {
+    //   this.getHttp();
+    //   this.changeCity=this.city;
+    // },
+    // activated(){
+    //   if(this.changeCity!=this.city){
+    //     this.getHttp();
+    //     this.changeCity = this.city;
+    //   }
+    // }
   }
 </script>
 
