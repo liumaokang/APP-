@@ -47,34 +47,34 @@
       GoWhere,
       Footer
     },
-    // methods:{
-    //   getHttp(){
-    //     this.$http.get("http://1.lovehou.applinzi.com/gethomedata.php").then((res) => {
-    //       let data = res.data.data;
-    //       console.log(data)
-    //       data.forEach((item,index)=>{
-    //         if(item.city==this.city){
-    //           this.swiperlist = item.swiperList;
-    //           this.iconlist = item.iconsList;
-    //           this.hotlist = item.hotImgs;
-    //           this.likelist = item.likeList;
-    //           this.vacationList = item.vacationList;
-    //           console.log(this.vacationList)
-    //         }
-    //       })
-    //    })
-    //   }
-    // },
-    // mounted() {
-    //   this.getHttp();
-    //   this.changeCity=this.city;
-    // },
-    // activated(){
-    //   if(this.changeCity!=this.city){
-    //     this.getHttp();
-    //     this.changeCity = this.city;
-    //   }
-    // }
+    methods:{
+      getHttp(){
+        this.$http.get("http://39.106.168.20/php/home_data.php").then((res) => {
+          let data = res.data.data;
+
+          data.forEach((item,index)=>{
+            if(item.city==this.city){
+              this.swiperlist = item.swiperlist;
+              this.iconlist = item.iconlist;
+              this.hotlist = item.hotlist;
+              this.likelist = item.likelist;
+              this.vacationList = item.vacationList;
+              console.log(this.hotlist)
+            }
+          })
+       })
+      }
+    },
+    mounted() {
+      this.getHttp();
+      this.changeCity=this.city;
+    },
+    activated(){
+      if(this.changeCity!=this.city){
+        this.getHttp();
+        this.changeCity = this.city;
+      }
+    }
   }
 </script>
 

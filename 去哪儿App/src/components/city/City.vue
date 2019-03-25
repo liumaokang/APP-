@@ -30,13 +30,13 @@
         }
       },
     },
-    // mounted(){
-    //   this.$http.get("http://localhost:8080/static/mock/data/city.json").then((res)=>{
-    //     this.data=res.data.data;
-    //     this.hotCities=this.data.hotCities;
-    //     this.cities=this.data.cities;
-    //   });
-    // }
+    mounted(){
+      this.$http.get("http://39.106.168.20/php/city.php").then((res)=>{
+        this.data=res.data.data;
+        this.hotCities=this.data.hotCities;
+        this.cities=this.data.cities;
+      });
+    }
   }
 </script>
 

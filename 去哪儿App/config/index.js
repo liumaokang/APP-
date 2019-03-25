@@ -10,12 +10,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api':{
-        target:'http://localhost:8080',//代理的IP地址
-        pathRewrite:{//重写路径
-          '^/api':'/static/mock/'
-        }
-      }
+      // '/api':{
+      //   target:'http://localhost:8080',//代理的IP地址
+      //   pathRewrite:{//重写路径
+      //     '^/api':'/static/mock/'
+      //   }
+      // }
     },
 
     // Various Dev Server settings
